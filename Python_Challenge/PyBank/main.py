@@ -1,8 +1,6 @@
-# Used to create file paths across operating systems
-import os
-
-# Used for reading CSV files
-import csv
+# Import required modules
+import os # Used to create file paths across operating systems
+import csv # Used for reading CSV files
 
 # Identify file path
 budget_path = os.path.join('Resources','budget_data.csv')
@@ -24,7 +22,7 @@ with open(budget_path,'rt') as budget_file:
     row_ct = 1
     profit_loss_previous = 0
 
-    # Read csv into dctionary & calculate change in profit/losses
+    # Read csv into dictionary & calculate change in profit/losses
     for row in csvreader:
         # If this is the 1st row, skip it. If not, compare Profit/Losses to last month.
         if row_ct == 1:
